@@ -2,7 +2,7 @@
 # syntax similar to makefiles
 
 # * each step can depend on other steps
-# * it can have optional settings like cwd or env variables
+# * it can have optional settings like cwd or env variable
 # * the step consists of one or more commands
 # * after all commands of a step, output files can be saved
 #
