@@ -1,1 +1,22 @@
-image: fedora
+image: "cytopia/ansible:latest"
+prompts:
+  - prompt: "ansible --version"
+    env:
+      - AI_OFFLINETOKEN
+      - PULL_SECRET
+    default_volumes: true
+    default_ports: true
+    volumes:
+      /usr:
+          bind: /mnt/vol3
+          mode: rw
+    ports:
+      4321/tcp: 4321
+  - prompt: "ansible"
+    alias: "ansible --version"
+volumes:
+  /tmp:
+      bind: /mnt/vol2
+      mode: rw
+ports:
+  1234/tcp: 1234
